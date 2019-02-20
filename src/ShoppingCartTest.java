@@ -51,15 +51,18 @@ public class ShoppingCartTest {
 	public void generalTest() {
 		ShoppingCart cart = new ShoppingCart();
 		cart.createCart();
-		Book books[] = new Book[5];
-		for(int i=0;i<5;i++) {
+		
+		int n = (int)(Math.random() * 50 + 1);
+		Book books[] = new Book[n];
+		
+		for(int i=0;i<n;i++) {
 			books[i] = new Book();
 			books[i].setName("Java Book" + i);
 			books[i].setPrice(127);
 			cart.addBook(books[i]);
 		}
-		assertTrue(cart.books.size()==5);
-		assertTrue(cart.totalValue==635);	
+		assertTrue(cart.books.size()==n);
+		assertTrue(cart.totalValue==(127*n));	
 	}
 
 }
