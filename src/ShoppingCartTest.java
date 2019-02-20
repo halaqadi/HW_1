@@ -46,5 +46,20 @@ public class ShoppingCartTest {
 		assertTrue(cart.books.size()==2);
 		assertTrue(cart.totalValue==227);	
 	}
+	
+	@Test
+	public void generalTest() {
+		ShoppingCart cart = new ShoppingCart();
+		cart.createCart();
+		Book books[] = new Book[5];
+		for(int i=0;i<5;i++) {
+			books[i] = new Book();
+			books[i].setName("Java Book" + i);
+			books[i].setPrice(127);
+			cart.addBook(books[i]);
+		}
+		assertTrue(cart.books.size()==5);
+		assertTrue(cart.totalValue==635);	
+	}
 
 }

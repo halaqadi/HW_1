@@ -3,11 +3,12 @@ import java.util.ArrayList;
 public class ShoppingCart {
 	
 	ArrayList <Book> books;
-	double totalValue=0;
+	double totalValue;
 
 	public void createCart() {
 		// TODO Auto-generated method stub
 		books = new ArrayList <Book> ();
+		totalValue = 0;
 	}
 	
 	public void addBook(Book book) {
